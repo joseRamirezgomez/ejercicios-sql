@@ -1,0 +1,23 @@
+mysql> CREATE TABLE aprendices(
+    -> id INT (20) UNIQUE PRIMARY KEY,
+    -> nombre_apellido VARCHAR (50) UNIQUE NOT NULL,
+    -> correo VARCHAR(50) UNIQUE NOT NULL,
+    -> edad INT UNSIGNED NOT NULL,
+    -> direccion VARCHAR(20) NOT NULL,
+    -> ciudad VARCHAR(20) NOT NULL,
+    -> estado ENUM('Activo', 'Inactivo') DEFAULT 'Inactivo',
+    -> creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    -> );
+    --insertar tabla 1 apendices
+    INSERT INTO aprendices (id, nombre_apellido, correo, edad, direccion, ciudad, estado)
+    -> VALUES
+    ->     (1, 'John Doe', 'john.doe@example.com', 25, '123 Main St', 'New York', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (2, 'Emily Johnson', 'emily.johnson@example.com', 22, '456 Oak Ave', 'Los Angeles', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (3, 'Michael Smith', 'michael.smith@example.com', 28, '789 Elm Rd', 'Chicago', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (4, 'Jessica Williams', 'jessica.williams@example.com', 30, '456 Pine Ln', 'Houston', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (5, 'William Brown', 'william.brown@example.com', 24, '890 Maple Blvd', 'Phoenix', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (6, 'Olivia Jones', 'olivia.jones@example.com', 29, '789 Cedar Dr', 'Philadelphia', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (7, 'Sophia Miller', 'sophia.miller@example.com', 27, '234 Birch St', 'San Antonio', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (8, 'Oliver Martinez', 'oliver.martinez@example.com', 26, '567 Walnut Ave', 'San Diego', IF(RAND() < 0.5, 'Activo', 'Inactivo')), 
+    ->     (9, 'Emma Gonzalez', 'emma.gonzalez@example.com', 23, '890 Oakwood Dr', 'Dallas', IF(RAND() < 0.5, 'Activo', 'Inactivo')),
+    ->     (10, 'Ava Davis', 'ava.davis@example.com', 31, '345 Willow Ln', 'San Jose', IF(RAND() < 0.5, 'Activo', 'Inactivo'));
