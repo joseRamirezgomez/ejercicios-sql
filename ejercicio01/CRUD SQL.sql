@@ -6,4 +6,4 @@
  -- USE (para hacer uso de una BD específica)
  USE <db>;
  -- SHOW TABLES (para visualizar las tablas creadas en la BD usada)
-SHOW TABLES;
+SHOW TABLES;iuhfjfu4
