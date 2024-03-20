@@ -1,0 +1,1 @@
+print('registe v1')
